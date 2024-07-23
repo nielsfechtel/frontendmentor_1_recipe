@@ -153,6 +153,7 @@ table {
   }
 }
 
+/* For landscape-devices like the iPad Pro. See note in Readme.md */
 @media screen and (height < 1200px) and (width > 600px) {
   main {
     height: max-content;
