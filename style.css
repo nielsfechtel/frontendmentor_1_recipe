@@ -104,6 +104,11 @@ hr {
   span {
     font-weight: var(--font-medium);
   }
+
+  ol {
+    list-style: decimal;
+    padding-inline-start: 1rem;
+  }
 }
 
 ul {
