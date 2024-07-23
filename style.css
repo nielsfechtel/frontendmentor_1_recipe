@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Young+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+:root {
+  --color-white: hsl(0, 0%, 100%);
+  --color-stone-100: hsl(30, 54%, 90%);
+  --color-stone-150: hsl(30, 18%, 87%);
+  --color-stone-600: hsl(30, 10%, 34%);
+  --color-stone-900: hsl(24, 5%, 18%);
+  --color-brown-800: hsl(14, 45%, 36%);
+  --color-rose-800: hsl(332, 51%, 32%);
+  --color-rose-50: hsl(330, 100%, 98%);
+
+  --font-family-young-serif: "Young Serif", sans-serif;
+  --font-family-outfit: "Outfit", sans-serif;
+
+  --font-light: 400;
+  --font-medium: 600;
+  --font-heavy: 700;
+  --font-size-p: 16px;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  overflow: auto;
+
+  font-family: var(--font-family-outfit);
+  color: var(--color-stone-600);
+  font-weight: 400;
+
+  display: grid;
+  place-content: center;
+
+  background-color: var(--color-stone-100);
+}
+
+main {
+  height: max(70vh, 400px);
+  width: max(30vw, 500px);
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  justify-content: space-between;
+  border-radius: 12px;
+
+  background-color: var(--color-white);
+  padding: 1.8rem;
+
+  font-size: 0.7rem;
+}
+
+h1 {
+  font-family: var(--font-family-young-serif);
+  font-weight: var(--font-light);
+  font-size: 2rem;
+  color: var(--color-stone-900);
+}
+
+.headliner-image {
+  display: grid;
+  place-content: center;
+
+  height: min-content;
+  img {
+    border-radius: 12px;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+h2 {
+  font-weight: var(--font-medium);
+  font-size: 1rem;
+  color: var(--color-brown-800);
+}
+
+hr {
+  color: var(--color-stone-100);
+  margin-block: 0.2rem;
+}
+
+.ingredients {
+  li::marker {
+    color: var(--color-rose-800);
+  }
+}
+
+.preparation {
+  background: var(--color-rose-50);
+
+  padding: 0.8rem;
+
+  h2 {
+    line-height: 1rem;
+    font-size: 1rem;
+    color: var(--color-rose-800);
+    padding-block-end: 0.4rem;
+  }
+}
+
+.instructions {
+  span {
+    font-weight: var(--font-medium);
+  }
+}
+
+ul {
+  padding-inline-start: 1rem;
+  list-style: disc;
+  li {
+    padding-inline-start: 0.8rem;
+    span {
+      font-weight: var(--font-medium);
+    }
+  }
+  li::marker {
+    font-size: 0.5rem;
+  }
+}
+
+table {
+  width: 100%;
+
+  tr:nth-of-type(-n + 3) {
+    border-bottom: 1px solid hsl(0deg 0% 0% / 0.1);
+    height: 30px;
+  }
+
+  th,
+  td {
+    text-align: start;
+  }
+
+  td {
+    color: var(--color-brown-800);
+    font-weight: var(--font-medium);
+  }
+}
+
+@media screen and (width < 600px) {
+  main {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (width > 600px) {
+  html,
+  body {
+    height: 100%;
+  }
+}
+
+@media screen and (height < 1200px) and (width > 600px) {
+  main {
+    height: max-content;
+  }
+}
